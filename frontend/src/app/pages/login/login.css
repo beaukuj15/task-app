@@ -1,0 +1,20 @@
+#main-container {
+	border: 3px solid red;
+	margin: 15vh auto;
+}
+
+#register-container {
+
+	width: 150px;
+	margin: 2vh auto;
+
+}
+
+#reg-button {
+	background: orange;
+}
+
+#reg-button:hover {
+	background: blue;
+	color: white;
+}

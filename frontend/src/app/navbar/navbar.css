@@ -1,0 +1,30 @@
+#main-navbar {
+	height: 5vh;
+	width: 100%;
+	background: #343d46;
+	margin: 0px;
+	padding: 0px;
+	display: flex;
+}
+
+#nav-item {
+	display: table;
+	border: 2px solid white;
+	color: white;
+	padding: 0px 16px;
+	margin: 4px 2%;
+	border-radius: 4px;
+}
+
+#nav-item:hover {
+	background: orange;
+	color: white;
+}
+
+#nav-p {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}

@@ -1,0 +1,103 @@
+
+<app-navbar></app-navbar>
+
+<h1 class="text-3xl font-bold text-center mt-10" id="task-header">
+  Tasks
+</h1>
+
+
+
+<div id="task-container">
+	
+
+
+	<div id="pcontainer">
+
+		@for (t of tasks; track t.id) {
+	      <div id="task-item">
+
+	      	<div id="task-num">
+	      		<p id="task-p">{{ $index+1 }} </p>
+	      	</div> 
+
+	      	<div id="task-name">
+	      		<p id="task-p">{{ t.name }} </p>
+	      	</div> 
+
+	      	<div id="task-price">
+	      		<p id="task-p">{{ t.description }} </p>
+	      	</div> 
+
+	      	<div id="task-update" (click)="updateClicked(t)">
+	      		<p id="task-p">Update</p>
+	      	</div> 
+
+	      	<div id="task-delete" (click)="deleteClicked(t)">
+	      		<p id="task-p">Delete</p>
+	      	</div> 
+
+	      </div>
+	    } @empty {
+	      <div id="no-prods">No tasks available.</div>
+	    }
+
+	</div>
+
+	@if (ftype == 1 || ftype == 2) {
+
+		
+		<form [formGroup]="myForm" id="form-container">
+			@if (ftype == 2) {
+				<div>
+					<p>Updating task #{{ updateId }}</p>
+				</div>
+			}
+	      <div id="form-item">
+
+	        <div id="form-label">
+	        	<p id="label-p">Task name:</p>
+	        </div>
+	        <input formControlName="name" id="form-input" placeholder="task title">
+	      </div>
+	      <div id="form-item">
+	        <div id="form-label">
+	        	<p id="label-p">Description:</p>
+	        </div>
+	        <input formControlName="description" id="form-input" placeholder="task description">
+	      </div>
+	      <button (click)="onSubmit()" id="form-submit">Submit</button>
+	      <button (click)="onCancel()" id="form-cancel">Cancel</button>
+	    </form>
+	}
+
+
+	@if (ftype == 0) {
+	<div id="button-container">
+		
+		<!--
+		<div id="task-button" (click)="getItems()">
+			<p id="task-bp">Get</p>
+		</div>
+		-->
+
+		<div id="task-button" (click)="createClicked()">
+			<p id="task-bp">Add new task</p>
+		</div>
+
+		<!--
+
+		<div id="task-button">
+			<p id="task-bp">Update</p>
+		</div>
+
+
+		<div id="task-button" (click)="fetchUsers()">
+			<p id="task-bp">Get users</p>
+		</div>
+		-->
+
+
+	</div>
+	}
+
+</div>

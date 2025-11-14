@@ -1,0 +1,45 @@
+.welcome-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #343a40;
+}
+
+p {
+}
+
+
+#main-container {
+  margin: 5vh 30vh;
+}
+
+#task-button {
+  display: table;
+  margin: 8px auto;
+  border: 2px solid green;
+  background: green;
+  text-align: center;
+  color: white;
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+}
+#task-button:hover {
+  background: blue;
+  color: white;
+
+}
+
+#task-p {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
