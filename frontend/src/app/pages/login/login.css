@@ -1,5 +1,4 @@
 #main-container {
-	border: 3px solid red;
 	margin: 15vh auto;
 }
 
@@ -11,10 +10,21 @@
 }
 
 #reg-button {
-	background: orange;
+	background: #187498;
+	border: 3px solid #343d46;
 }
 
 #reg-button:hover {
-	background: blue;
+	background: orange;
 	color: white;
+}
+
+#submit-button {
+	background: #36AE7C;
+	border: 3px solid #343d46;
+}
+
+#submit-button:hover {
+	background: orange;
+	border: 3px solid #343d46;
 }
