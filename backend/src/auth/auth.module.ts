@@ -7,8 +7,6 @@ import { JwtStrategy } from "./jwt/jwt.strategy";
 
 
 import "dotenv/config";
-var sec = "testo";
-console.log("some auth secret: " + process.env.JWT_SECRET);
 
 
 @Module({

@@ -29,7 +29,6 @@ export class DataService {
   }
 
   genericDEL(path: string): Promise<any> {
-    console.log("doiing delete fetch to: " + this.fetchUrl + path);
     return this.fetch(this.fetchUrl + path, 'DELETE', null);
   }
 

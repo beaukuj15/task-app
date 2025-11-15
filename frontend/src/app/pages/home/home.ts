@@ -53,9 +53,6 @@ export class Home {
 
 
 
-
-
-
   deleteClicked(product: any) {
     console.log("deleting item with id: " + product.id);
 
@@ -64,19 +61,13 @@ export class Home {
 
 
   createClicked() {
-
-
     this.ftype = 1;
-
   }
-
 
   updateClicked(task: any) {
 
-
     this.ftype = 2;
     this.updateId = task.id;
-
 
   }
 
@@ -140,19 +131,12 @@ export class Home {
 
   deleteItem(id: number) {
 
-
     let dpath = "/tasks/" + id.toString();
-
-    console.log("deleting item at dpath: " + dpath);
-
 
     this.dataService.genericDEL(dpath).then(res => {
 
       console.log("successfully deleted item: " + JSON.stringify(res));
-
-      //window.location.reload();
       this.getItems();
-
     }).catch(err => {
       console.log("error deleting item: " + JSON.stringify(err));
     })
@@ -161,13 +145,7 @@ export class Home {
 
   getItems() {
 
-
-    console.log("fetching prod items..");
-
-
     let fetchPath = `/tasks`;
-
-    console.log("fetching from get path: " + fetchPath);
 
     this.dataService.genericGET(fetchPath).then(res => {
 
@@ -186,7 +164,6 @@ export class Home {
     var tasks = [];
 
     for (var j = 0; j < pitems.length; j ++) {
-      console.log("some prod item: " + JSON.stringify(pitems[j]));
 
       let p = pitems[j];
       let task = new Task(p.id, p.name, p.description);
@@ -200,11 +177,8 @@ export class Home {
 
   fetchUsers() {
 
-
     this.dataService.genericGET("/users").then(res => {
-
-      console.log("some user fetch result: " + JSON.stringify(res));
-
+      console.log("users fetch result: " + JSON.stringify(res));
     }).catch(err => {
       console.log("some user fetch err: " + JSON.stringify(err));
     })
